@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap');
+
+:root {
+    --primary-font: #F0F8FF;
+    --secondary-font: #203a1d;
+}
+
+.weird-font {
+    color: var(--secondary-font);
+}
+
+ul#recipes li {
+    list-style-type: none;
+}
+
+ul#recipes a {
+    text-decoration: none;
+    border: 1px solid var(--secondary-font);
+    border-radius: 50px;
+    padding: 3vh;
+    margin: 10px;
+}
+
+ul#recipes a:hover {
+    /* border: 1px solid var(--primary-font); */
+    animation: borderSwitch 0.8s forwards;
+}
+
+ul#recipes h3 {
+    color: var(--secondary-font);
+    
+}
+
+.x-product {
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/x.png);
+    background-size: contain;
+}
+.x-product:hover {
+    animation: switchingX 0.8s forwards;
+}
+
+.x-list {
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/x.png);
+    background-size: contain;
+}
+
+.x-list:hover {
+    animation: switchingX 0.8s forwards;
+}
+
+#hints {
+    background: linear-gradient(180deg,#232526 0%,  #414345 15%);   
+    opacity: 0.92;
+    color: var(--primary-font);
+}
+
+ul#products li {
+    border-radius: 50px;
+    padding: 3vh;
+    margin: 10px;
+}
+
+ul#hints li:hover {
+    animation: backgroundSwitch 0.8s forwards;
+}
+
+
+#hints li {
+    border-radius: 50px;
+    padding: 3vh;
+    justify-content: center;
+}
+
+
+html {
+    height: 100vh;
+    max-width: 100%;
+    animation: introLogo 1s forwards;
+}
+
+body
+{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(180deg, white 0%,  #649173 80%);
+    background-attachment: fixed;
+    color: var(--primary-font);
+}
+
+hr {
+    border-color: var(--secondary-font);
+    border-top: 1px solid var(--secondary-font);
+}
+
+.container
+{
+    /* background: #05204A;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2); */
+
+    position: absolute;
+    display: flex;
+    width: 60%;
+    left: 20%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 600px;
+    margin: 20px;
+    flex-direction: column;
+    /* background: rgb(246,246,246);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(150, 200, 80) 100%);*/
+}
+
+.header {
+    background-image: url("./img/header-bcg5.png");
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.menu {
+    padding: 10px;
+}
+
+.menu ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-decoration: none; 
+    list-style: none; 
+}
+
+#first-li {
+    border-right: 2px dotted var(--secondary-font);
+}
+
+.menu a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: var(--secondary-font);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.menu li:hover > a {
+    animation: switchingColors 1s forwards;
+}
+
+input, select {
+    color: var(--secondary-font);
+    border-radius: 50px;
+    background: rgb(238, 246, 255);
+    padding:4px;
+    border: none;
+    opacity: 0.5;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.inputBar
+{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: baseline;
+    justify-content: center;
+}
+
+
+.inputBar > *
+{
+    height: 60%;
+    margin: 0 10px;
+}
+
+.calculatorForm
+{
+    display: none;
+}
+
+#product
+{
+    width: 150px;
+}
+
+#amount
+{
+    width: 100px;
+}
+
+#submit
+{
+    width: 85px;
+}
+
+#calories {
+    width: 150px;
+}
+
+#query {
+    width: 150px;
+}
+
+#amount2 {
+    width: 50px;
+}
+
+#calc {
+    width: 100px;
+}
+
+.caloriesSum
+{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: var(--secondary-font);
+    text-transform: uppercase;
+}
+
+#products, #recipes
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#products > *, #recipes > *
+{
+    display: flex;
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 80px;
+    border: 1px solid;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hints
+{
+    position: absolute;
+    border: 1px solid;
+    width: 30%;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    top: 10%;
+    left: 35%;
+    background-color: rgb(212, 212, 212);
+    justify-content: space-between;
+    padding: 5px;
+    display: none;
+    border-radius: 20px;
+}
+
+#hints > *
+{
+    display: flex;
+    width: 100%;
+    margin: 5px;
+    height: 80px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid;
+    align-items: center;  
+}
+
+#hints h2
+{
+    border: none;
+}
+
+
+
+#menubar
+{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
+
+.footer {
+    color: var(--secondary-font);
+    padding: 10px;
+    margin: 40px 10px 10px 10px;
+    text-align: center;
+    border: 1px var(--secondary-font) solid;
+    border-radius: 3rem;
+    text-transform: uppercase;
+}
+
+@keyframes switchingColors {
+    100% {color: var(--primary-font);text-decoration: underline overline dotted var(--secondary-font);}
+}
+
+@keyframes introLogo {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes switchingX {
+    100% {background-image: url(./img/x-red.png);
+        background-size: contain;}
+}
+
+@keyframes borderSwitch {
+    100% {border: 1px solid var(--primary-font);}
+}
+
+@keyframes backgroundSwitch {
+    100% {background-color: black;}
+}

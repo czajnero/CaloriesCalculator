@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recipe searcher</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="api.js" defer></script>
+    <script src="recipes.js" defer></script>
+</head>
+<body>
+    <div class="container">
+		<div class="header">
+        </div>
+        <div class="menu">
+            <hr>
+            <ul>
+                <li id="first-li"><a href="index.html">Calories calculator</a></li>
+                <li><a href="index2.html">Recipe searcher</a></li>
+            </ul>
+            <hr>
+        </div>
+        <form class="inputBar searchForm"> 
+            <input type="text" id="query" placeholder="What do you like...">
+            <input type="number" id="calories" placeholder="Calories per day..." min="1" max="10000" required>
+            <select id="amount" form="searchForm">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+            </select><label for="amount"><p class="weird-font">recipes</p></label>
+            <input type="button" id="calc" value="Calculate" onclick="showCalc()">
+            <input type="submit" id="submit" value="Search">
+        </form>
+        <form class="inputBar calculatorForm">
+            <div>
+                <input type="number" id="weight" placeholder="Weight..." min="1" max="500" required><label for="weight">kg</label>
+            </div>
+            <div>
+                <input type="number" id="height" max="300" placeholder="Height..." min="1" required><label for="height">cm</label>
+            </div>
+            <div>
+                <input type="number" id="age" placeholder="Age..." min="1" max="110" required>
+            </div>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" checked><label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+            </div>
+            <div><input type="range" id="activityLevel" min="0" max="5" value="2"><br/><label for="activityLevel">Activity level</label></div>
+            <div>
+              <input type="number" id="bodyFat" placeholder="Body fat..." min="1" max="100"><label for="bodyFat">%</label>
+          </div>
+            <input type="submit" id="submit" value="Calculate">
+        </form>
+        
+        <ul id="recipes">
+
+        </ul>
+        <input type="button" id="moreBtn" value="Load more" onclick="loadMore()">
+		<div class="footer">
+                &copy; wiatrgonifale 2019
+        </div>
+    </div>
+</body>
+</html>
